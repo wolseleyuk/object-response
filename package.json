@@ -9,7 +9,7 @@
     "type": "module",
     "scripts": {
         "_tsc": "tsc",
-        "_make-bundle": "rollup --config",
+        "_make-bundle": "rollup -c --bundleConfigAsCjs",
         "build": "run-s _tsc _make-bundle"
     },
     "devDependencies": {
@@ -20,6 +20,7 @@
         "rollup-plugin-dts": "^6.2.1"
     },
     "dependencies": {
+        "@rollup/plugin-terser": "^0.4.4",
         "tslib": "^2.8.1"
     }
 }
