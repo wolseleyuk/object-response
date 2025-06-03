@@ -1,26 +1,20 @@
 {
     "compilerOptions": {
-        /* Base Options: */
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "target": "es2022",
-        "allowJs": true,
-        "resolveJsonModule": true,
-        "moduleDetection": "force",
-        "isolatedModules": true,
-        /* Strictness */
-        "strict": true,
-        "noUncheckedIndexedAccess": true,
-        /* If transpiling with TypeScript: */
-        "moduleResolution": "NodeNext",
-        "module": "NodeNext",
-        "outDir": "dist",
+        "moduleResolution": "node",
+        "removeComments": false,
         "sourceMap": true,
-        /* AND if you're building for a library: */
+        "target": "es2018",
+        "outDir": "dist",
         "declaration": true,
+        "strict": true,
+        "module": "esnext",
+        "noEmitOnError": true,
+        "lib": [
+            "es2017"
+        ],
+        "esModuleInterop": false,
     },
     "include": [
-        "src/**/*.ts",
-        "src/**/*.json"
+        "src"
     ]
 }
