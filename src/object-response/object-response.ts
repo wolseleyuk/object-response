@@ -4,12 +4,12 @@ export class ObjectResponse {
     message: string;
 
     static get success(): TObjectResponse {
-        return new ObjectResponse(true, "Completed successfully").toObject();
+        return new ObjectResponse({ ok: true, message: "Completed successfully" }).toObject();
     }
 
-    constructor(ok: boolean, message: string) {
-        this.ok = ok;
-        this.message = message;
+    constructor(obj: TObjectResponse) {
+        this.ok = obj.ok;
+        this.message = obj.message;
     }
 
     public toObject(): TObjectResponse {

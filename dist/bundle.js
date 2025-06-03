@@ -6,11 +6,11 @@
 
     class ObjectResponse {
         static get success() {
-            return new ObjectResponse(true, "Completed successfully").toObject();
+            return new ObjectResponse({ ok: true, message: "Completed successfully" }).toObject();
         }
-        constructor(ok, message) {
-            this.ok = ok;
-            this.message = message;
+        constructor(obj) {
+            this.ok = obj.ok;
+            this.message = obj.message;
         }
         toObject() {
             return {

@@ -2,7 +2,7 @@ export declare class ObjectResponse {
     ok: boolean;
     message: string;
     static get success(): TObjectResponse;
-    constructor(ok: boolean, message: string);
+    constructor(obj: TObjectResponse);
     toObject(): TObjectResponse;
 }
 type TObjectResponse = {
